@@ -29,8 +29,8 @@ public class GoogleSearch_StepDefinitions {
     public void user_types_in_the_google_search_box_and_clicks_enter(String searchKeyword) {
         googleSearchPage.searchBox.sendKeys(searchKeyword+Keys.ENTER);
     }
-    @Then("user sees {string} is in the google titl")
-    public void user_sees_is_in_the_google_titl(String expectedTitle) {
+    @Then("user sees {string} is in the google title")
+    public void user_sees_is_in_the_google_title(String expectedTitle) {
         String actualTitle = Driver.getDriver().getTitle();
         assertEquals(expectedTitle, actualTitle);
     }

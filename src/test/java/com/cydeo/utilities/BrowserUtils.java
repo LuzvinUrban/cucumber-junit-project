@@ -22,7 +22,7 @@ public class BrowserUtils {
         // 1 second = 1000 millis
         // millis = seconds*1000
         try {
-            Thread.sleep(seconds*1000);
+            Thread.sleep(seconds*2000);
         }catch(InterruptedException e){
             e.printStackTrace();
             System.out.println("Exception happened in sleep method!");
