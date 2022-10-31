@@ -32,8 +32,6 @@ public class WikiSearch_StepDef {
         Assert.assertTrue("Title verification is failed",Driver.getDriver().getTitle().contains("Steve Jobs"));
     }
 
-
-
     @When("User types {string} in the wiki search box")
     public void user_types_in_the_wiki_search_box(String searchKeyword) {
        wikiSearchPage.searchBox.sendKeys(searchKeyword);
