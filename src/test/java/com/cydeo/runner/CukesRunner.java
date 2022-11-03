@@ -7,11 +7,16 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin ="html:target/cucumber-report.html",
+        plugin = {
+             "html:target/cucumber-report.html",
+              "rerun:target/rerun.text",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+       },
         features = "src/test/resources/features" ,
         glue = "com/cydeo/step_definitions" ,
-        dryRun = true,
-        tags = "@webtableAppOrder"
+        dryRun =false,
+        tags = "@wip",
+        publish = true
 )
 
 public class CukesRunner {

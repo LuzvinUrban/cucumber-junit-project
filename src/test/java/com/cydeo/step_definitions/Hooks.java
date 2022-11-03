@@ -23,8 +23,6 @@ public class Hooks {// we want to handle before and after scenario
 
         }
 
-
-
         Driver.closeDriver();
     }
 

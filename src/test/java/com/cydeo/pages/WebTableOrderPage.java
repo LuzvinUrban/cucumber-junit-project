@@ -11,54 +11,39 @@ import java.util.List;
 
 public class WebTableOrderPage extends BasePage {
 
-    public void webTableOrderPage() {
+    public WebTableOrderPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //public void navigate_to() {
-    //  Driver.getDriver().navigate().to(ConfigurationReader.getProperty("env"));
-
-    // }
-
-
     @FindBy(name = "product")
-    //xpath = "//input[@name='username']")
-    public WebElement productTypeDropDown;
-
+    public WebElement productTypeDropdown;
 
     @FindBy(name = "quantity")
     public WebElement inputQuantity;
 
-    @FindBy(name = "product")
+    @FindBy(name = "name")
     public WebElement inputName;
 
-    @FindBy(name = "Street")
+    @FindBy(name = "street")
     public WebElement inputStreet;
 
-
-    @FindBy(name = "City")
+    @FindBy(name = "city")
     public WebElement inputCity;
 
-
-    @FindBy(name = "State")
+    @FindBy(name = "state")
     public WebElement inputState;
 
-
-    @FindBy(name = "Zip")
+    @FindBy(name = "zip")
     public WebElement inputZip;
-
 
     @FindBy(name = "card")
     public List<WebElement> cardType;
 
+    @FindBy(name = "cardNo")
+    public WebElement inputCardNo;
 
-    @FindBy(name = "product")
-    public WebElement cardNo;
-
-
-    @FindBy(name = "CardExp")
+    @FindBy(name = "cardExp")
     public WebElement inputCardExp;
-
 
     @FindBy(xpath = "//button[.='Process Order']")
     public WebElement processOrderButton;
