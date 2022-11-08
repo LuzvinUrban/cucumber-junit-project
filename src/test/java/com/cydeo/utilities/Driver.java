@@ -13,8 +13,6 @@ public class Driver {
      from outside of any classes
      */
     private Driver() {}
-
-
     /*
     Making our 'driver' instance private, so that it is not reachable from out side of any class
     We make it static, because we want it to run before anything else,
@@ -24,8 +22,6 @@ public class Driver {
     /*
     Create re-usable utility method which will return same driver instance when we call it.
      */
-
-
     public static WebDriver getDriver() {
         if (driverPool.get() == null) {  // if driver/browser was never opened
             String browserType = ConfigurationReader.getProperty("browser");

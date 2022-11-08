@@ -30,7 +30,7 @@ public class Hooks {// we want to handle before and after scenario
     //  @Before
     public void setupScenario() {
         System.out.println("Setting up browser using cucumber @Before each scenario");
-        // Driver.getDriver().get("URL of your app");
+        Driver.getDriver().get("URL of your app");
 
 }
 
@@ -45,7 +45,9 @@ public class Hooks {// we want to handle before and after scenario
     }
 
     //@Before (value="@db" , order=3)
-    public void setupDatabaseScenario() {
+    public void setupDatabaseScenario()
+    {
+        System.out.println("===this will only apply to scenarios with @db tag");
 
     }
 
